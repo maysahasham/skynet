@@ -18,6 +18,11 @@
     font-size: 18px;
     margin-top: 20px;
   }
+  #timer p {
+    color: #111; /* Darker text color */
+    font-weight: bold; /* Bold text */
+    margin: 5px;
+  }
 </style>
 </head>
 <body>
@@ -25,7 +30,7 @@
 <div id="timer"></div>
 <script>
   // Set the target birthday (replace with the desired date)
-  const targetDate = new Date("2023-12-08T00:00:00");
+  const targetDate = new Date("2023-12-31T00:00:00");
 
   function updateTimer() {
     const currentDate = new Date();
