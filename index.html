@@ -1,61 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Birthday Countdown Timer</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
-    background-image: url('dinasour.jpg'); /* Replace with your image URL */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-  h1 {
-    color: darkgreen; /* Dark green header text color */
-  }
-  #timer {
-    font-size: 30px;
-    margin-top: 60px;
-  }
-  #timer p {
-    color: darkgreen; /* Darker text color */
-    font-weight: bold; /* Bold text */
-    margin: 5px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('flyer2.jpg'); /* Replace 'background-image.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #ffffff; /* Change the text color as needed */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        @media screen and (min-width: 801px) {
+            /* Styles for larger screens (desktop) */
+            body {
+                background-size: contain; /* Adjust background size for better visibility on larger screens */
+            }
+
+            .container {
+                padding: 120px 20px; /* Adjust padding for better spacing on larger screens */
+            }
+        }
+    </style>
+    
 </head>
 <body>
-<h1>First Birthday Countdown</h1>
-<div id="timer"></div>
-<script>
-  // Set the target birthday (replace with the desired date)
-  const targetDate = new Date("2023-12-08T00:00:00");
 
-  function updateTimer() {
-    const currentDate = new Date();
-    const timeDifference = targetDate - currentDate;
 
-    const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-    document.getElementById("timer").innerHTML = `
-      <p>${days}  days</p>
-      <p>${hours}  hours</p>
-      <p>${minutes} minutes</p>
-      <p>${seconds} seconds</p>
-    `;
-  }
-
-  // Update the timer every second
-  setInterval(updateTimer, 1000);
-  updateTimer(); // Call initially to avoid delay
-</script>
 </body>
 </html>
-6 
