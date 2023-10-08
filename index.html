@@ -3,29 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button with Background Image</title>
+    <title>Test site</title>
     <style>
-        /* Style for the container with background image */
+        /* Default styles for the container */
         .container {
+            width: 837px; /* Set the fixed width */
+            height: 1131px; /* Set the fixed height */
             background-image: url('flyer06.png');
-            background-size: contain; /* Adjust the background image size as needed */
-            background-position: center;
+            background-size: contain;
             background-repeat: no-repeat;
-            background-color: #ffffff;
-            background-attachment: fixed; 
-            height: 100vh; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #ffffff;
+            background-position: center;
             position: relative;
-
-
+            margin: 0 auto; /* Center the container horizontally */
         }
 
-        /* Style for the button */
-        .button {
+            .button {
             position: absolute;
             left: 50%; /* Center the button horizontally within the container */
             bottom: 23%; /* Adjust the margin from the bottom as needed */
@@ -35,6 +27,14 @@
             padding: 1% 2%;
             border: none;
             cursor: pointer;
+        }
+
+        /* Additional styles for smaller screens (adjust as needed) */
+        @media only screen and (max-width: 600px) {
+            .container {
+                width: 100%; /* Full width for smaller screens */
+                height: auto; /* Auto height to maintain aspect ratio */
+            }
         }
     </style>
 </head>
