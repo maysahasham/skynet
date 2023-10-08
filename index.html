@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button with Background Image</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-image: url('flyer06.png'); 
-            background-size: contain;
+        /* Style for the container with background image */
+        .container {
+            background-image: url('flyer06.png');
+            background-size: contain; /* Adjust the background image size as needed */
             background-position: center;
             background-repeat: no-repeat;
             background-color: #ffffff;
@@ -18,49 +18,29 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: #ffffff; 
+            color: #ffffff;
+
+
         }
 
-        h1 {
-            font-size: 2em;
-        }
-
-        p {
-            font-size: 1.5em;
-        }
-            .rounded-button {
+        /* Style for the button */
+        .button {
+            position: absolute;
+            left: 50%; /* Center the button horizontally within the container */
+            bottom: 23%; /* Adjust the margin from the bottom as needed */
+            transform: translateX(-50%); /* Center the button horizontally */
+            background-color: #007bff; /* Button background color */
+            color: #fff; /* Button text color */
             padding: 10px 20px;
-            border-radius: 20px; 
-            background-color: #355E3B; 
-            color: #fff; 
-            border: none; 
-            cursor: pointer; 
-            position: absolute; 
-            top: 675px; 
-            left:930px; 
+            border: none;
+            cursor: pointer;
         }
-
-        .rounded-button:hover {
-            background-color: #000000;
-        }
-
-         @media (max-width: 600px){
-            .rounded-button {
-                position: absolute; 
-               
-                display: block; 
-                text-align: center; 
-                top: 495px;
-                left: 163px;
-
-            }
-        }
-
-        
     </style>
 </head>
 <body>
-   
-    <title>Maysa's Birthday Invitation</title>
+    <div class="container">
+        <!-- Your content goes here -->
+        <button class="button">Click Me</button>
+    </div>
 </body>
 </html>
