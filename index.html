@@ -3,45 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Container with Background Image</title>
     <style>
-        /* Default styles for the container */
-        .container {
-            width: 837px; /* Set the fixed width */
-            height: 1131px; /* Set the fixed height */
-            background-image: url('flyer06.png');
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('flyer04.png'); 
             background-size: contain;
-            background-repeat: no-repeat;
             background-position: center;
-            position: relative;
-            margin: 0 auto; /* Center the container horizontally */
+            background-repeat: no-repeat;
+            background-color: #ffffff;
+            background-attachment: fixed; 
+            height: 100vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff; 
         }
 
-            .button {
-            position: absolute;
-            left: 50%; /* Center the button horizontally within the container */
-            bottom: 23%; /* Adjust the margin from the bottom as needed */
-            transform: translateX(-50%); /* Center the button horizontally */
-            background-color: #007bff; /* Button background color */
-            color: #fff; /* Button text color */
-            padding: 1% 2%;
-            border: none;
-            cursor: pointer;
+        h1 {
+            font-size: 2em;
         }
 
-        /* Additional styles for smaller screens (adjust as needed) */
-        @media only screen and (max-width: 600px) {
-            .container {
-                width: 100%; /* Full width for smaller screens */
-                height: auto; /* Auto height to maintain aspect ratio */
+        p {
+            font-size: 1.5em;
+        }
+            .rounded-button {
+            padding: 10px 20px;
+            border-radius: 20px; 
+            background-color: #355E3B; 
+            color: #fff; 
+            border: none; 
+            cursor: pointer; 
+            position: absolute; 
+            top: 675px; 
+            left:930px; 
+        }
+
+        .rounded-button:hover {
+            background-color: #000000;
+        }
+
+         @media (max-width: 600px){
+            .rounded-button {
+                position: absolute; 
+               
+                display: block; 
+                text-align: center; 
+                top: 495px;
+                left: 163px;
+
             }
         }
+
+        
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Your content goes here -->
-        <button class="button">Click Me</button>
-    </div>
+    <button class="rounded-button">RSVP</button>
+    <title>Maysa's Birthday Invitation</title>
 </body>
 </html>
