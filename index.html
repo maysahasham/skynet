@@ -1,66 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperMax</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            background-image: url('flyer06.png'); 
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-color: #ffffff;
-            background-attachment: fixed; 
-            height: 100vh; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: url('MaxSid.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: 'Arial', sans-serif;
             text-align: center;
-            color: #ffffff; 
+            margin: 0;
+            padding: 20px;
+        }
+
+        #quote-container {
+            margin-top: 20vh;
         }
 
         h1 {
-            font-size: 2em;
+            font-size: 3em; /* Adjust the font size as needed */
+            text-shadow: 2px 2px 4px #888; /* Add a 3D-like shadow effect */
         }
 
-        p {
-            font-size: 1.5em;
+        #quote {
+            font-size: 2em; /* Adjust the font size as needed */
+            margin-top: 20px;
+            text-shadow: 2px 2px 4px #888; /* Add a 3D-like shadow effect */
         }
-            .rounded-button {
-            padding: 10px 20px;
-            border-radius: 20px; 
-            background-color: #355E3B; 
-            color: #fff; 
-            border: none; 
-            cursor: pointer; 
-            position: absolute; 
-            top: 675px; 
-            left:930px; 
-        }
-
-        .rounded-button:hover {
-            background-color: #000000;
-        }
-
-         @media (max-width: 600px){
-            .rounded-button {
-                position: absolute; 
-               
-                display: block; 
-                text-align: center; 
-                top: 495px;
-                left: 163px;
-
-            }
-        }
-
-        
     </style>
 </head>
+
 <body>
-   
-    <title>Maysa's Birthday Invitation</title>
+    <div id="quote-container">
+        <p id="quote"></p>
+    </div>
+
+    <script>
+        // Array of motivational quotes
+        const quotes = [
+            "The only way to do great work is to love what you do. - Steve Jobs",
+            "Believe you can and you're halfway there. -Theodore Roosevelt",
+            "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
+            "Your time is limited, don't waste it living someone else's life. - Steve Jobs",
+            "It always seems impossible until it is done. - Nelson Mandela",
+            "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt"
+        ];
+
+        // Function to display a random quote
+        function displayRandomQuote() {
+            const quoteElement = document.getElementById('quote');
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            quoteElement.textContent = quotes[randomIndex];
+        }
+
+        // Display an initial quote
+        displayRandomQuote();
+
+        // Set interval to change quote every 10 minutes (600,000 milliseconds)
+        setInterval(displayRandomQuote, 600000);
+    </script>
 </body>
+
 </html>
