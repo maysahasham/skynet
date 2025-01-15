@@ -76,6 +76,11 @@
             text-align: center;
             margin-bottom: 20px;
             position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
         }
 
         .date-display button {
@@ -83,7 +88,6 @@
             color: white;
             border: none;
             padding: 10px;
-            margin: 0 5px;
             font-size: 1rem;
             border-radius: 5px;
             cursor: pointer;
@@ -103,7 +107,7 @@
         .mini-calendar {
             display: none;
             position: absolute;
-            top: 40px;
+            top: 50px;
             left: 50%;
             transform: translateX(-50%);
             background: #34495e;
@@ -197,6 +201,10 @@
         }
 
         @media (max-width: 768px) {
+            .date-display {
+                flex-direction: column;
+            }
+
             .date-display button {
                 font-size: 0.9rem;
                 padding: 8px;
@@ -274,7 +282,6 @@
             const isValid = validUsers.some(user => user.username === username && user.password === password);
 
             if (isValid) {
-                alert('Login successful!');
                 loginContainer.style.display = 'none';
                 trackerContainer.style.display = 'block';
                 updateDateDisplay();
